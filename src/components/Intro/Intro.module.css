@@ -1,0 +1,138 @@
+.section {
+  background-image: url("../../images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 80% 150%;
+  background-position: 190% 70%;
+  background-color: hsl(220, 16%, 96%);
+  height: 90vh;
+  grid-column: 1 / -1;
+  grid-row: 2 / 4;
+
+  display: grid;
+  grid-template-columns: minmax(3rem, 1fr) repeat(4, minmax(min-content, 30rem)) minmax(
+      3rem,
+      1fr
+    );
+  grid-template-rows: 100%;
+  overflow-y: visible;
+}
+
+.section aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  align-self: center;
+  max-width: 40rem;
+  margin-right: 3rem;
+}
+
+.section h1 {
+  opacity: 0;
+  animation-name: move-right, enlarge;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s, 1s;
+  animation-delay: 1.5s, 5s;
+  animation-fill-mode: forwards, forwards;
+}
+
+.section span {
+  opacity: 0;
+  animation: move-right 1.5s ease-in-out 2s;
+  animation-fill-mode: forwards;
+}
+
+.section button {
+  opacity: 0;
+  animation: move-right 1.5s ease-in-out 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.section img {
+  grid-column: 3 / -1;
+  justify-self: end;
+  grid-row: 1 / 2;
+  transform: translate(130px, -120px);
+  clip-path: polygon(0% 0%, 83% 0%, 83% 100%, 0% 100%);
+  height: auto;
+  max-width: 100%;
+}
+
+@keyframes move-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  70% {
+    opacity: 0.6;
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+    background-size: 180% 140%;
+    background-position: 50% 135%;
+  }
+
+  .section aside {
+    order: 1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .section img {
+    transform: translate(0, -280px);
+    clip-path: none;
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 40.63em) {
+  .section {
+    background-image: url("../../images/bg-intro-mobile.svg");
+    background-size: contain;
+    background-position: top;
+  }
+
+  .section aside {
+    margin-right: 0;
+  }
+
+  .section img {
+    transform: translate(0, -200px);
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .section img {
+    transform: translate(0, -100px);
+  }
+}

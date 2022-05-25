@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: minmax(3rem, 1fr) repeat(4, minmax(min-content, 30rem)) minmax(
+      3rem,
+      1fr
+    );
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (max-width: 40.63em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 50%;
+  }
+}

@@ -1,0 +1,33 @@
+.features {
+  grid-column: 1/-1;
+  background-color: hsl(220, 16%, 96%);
+
+  display: grid;
+  grid-template-columns: minmax(3rem, 1fr) repeat(4, minmax(min-content, 30rem)) minmax(
+      3rem,
+      1fr
+    );
+  padding: 15rem 0 20rem;
+}
+
+.features > div {
+  grid-column: 2 / 6;
+}
+
+.feature-card {
+  padding-right: 3rem;
+}
+
+.feature-card h3 {
+  margin: 2rem 0;
+}
+
+@media only screen and (max-width: 40.63em) {
+  .features > div > span {
+    display: inline-block;
+    width: 100%;
+    /* margin: 0 auto; */
+    text-align: center;
+    padding: 0 5rem;
+  }
+}

@@ -1,0 +1,17 @@
+.button {
+  background-image: linear-gradient(
+    to right,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+  border-radius: 2rem;
+  padding: 1rem 2.3rem;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  transition: all 0.3s !important;
+}
+
+.button:hover {
+  opacity: 0.6 !important;
+  cursor: pointer;
+}

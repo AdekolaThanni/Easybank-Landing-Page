@@ -1,0 +1,45 @@
+.articles {
+  grid-column: 1/-1;
+  background-color: hsl(0, 0%, 98%);
+
+  display: grid;
+  grid-template-columns: minmax(3rem, 1fr) repeat(4, minmax(min-content, 32rem)) minmax(
+      3rem,
+      1fr
+    );
+  padding: 15rem 0 20rem;
+}
+
+.articles > div {
+  grid-column: 2 / 6;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.article-card aside {
+  background-color: white;
+  padding: 2rem;
+  height: 23rem;
+}
+
+.article-card img {
+  height: 20rem;
+  width: 100%;
+}
+
+.article-card span:first-child {
+  color: hsl(233, 8%, 62%);
+}
+
+.article-card h3 {
+  margin: 2rem 0;
+}
+
+.article-card h3 {
+  font-size: 1.8rem;
+}

@@ -1,0 +1,9 @@
+.hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 40.63em) {
+  .hamburger {
+    display: inline-block;
+  }
+}

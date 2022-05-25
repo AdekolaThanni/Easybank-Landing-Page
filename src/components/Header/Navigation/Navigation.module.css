@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 65rem;
+  margin-left: 2rem;
+  animation: nav-move-left 1.5s ease-in-out;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+@keyframes nav-move-left {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  70% {
+    opacity: 0.6;
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 40.63em) {
+  .nav {
+    flex-direction: column;
+    margin-left: 0;
+    animation: none;
+    backface-visibility: unset;
+    position: absolute;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 4rem 3rem;
+    flex: none;
+    width: 30rem;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.display {
+  display: none;
+}

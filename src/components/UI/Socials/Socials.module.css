@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 2 /3;
+  align-self: end;
+}
+
+.socials svg {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 40.63em) {
+  .socials {
+    align-self: center;
+  }
+
+  .socials > svg {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}
